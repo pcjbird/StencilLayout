@@ -19,5 +19,8 @@ Pod::Spec.new do |s|
   
   s.dependency 'YYImage/WebP'
   s.dependency 'YYWebImage'
+
+  s.requires_arc = true
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   
 end
