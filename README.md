@@ -18,11 +18,11 @@
   
 ## 安装 / Installation
   
- 方法一：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
+方法一：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
   
-  ```
-  pod "StencilLayout"
-  ```
+```
+pod "StencilLayout"
+```
   
 ## 使用 / Usage
   
