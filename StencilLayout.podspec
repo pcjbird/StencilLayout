@@ -11,9 +11,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/pcjbird/StencilLayout.git', :tag => s.version.to_s }
   
   s.requires_arc = true
-  s.source_files = 'StencilLayout/*.{h,m}'
-  s.public_header_files = 'StencilLayout/*.{h}'
+  s.source_files = 'StencilLayout/source/*.{h,m}','StencilLayout/source/Categories/*.{h,m}','StencilLayout/source/Util/*.{h,m}'
+  s.public_header_files = 'StencilLayout/public/*.{h}'
   s.frameworks = 'Foundation','UIKit','WebKit'
+
+  s.resources = "StencilLayoutResource/StencilLayout.bundle"
   
   s.dependency 'YYImage/WebP'
   s.dependency 'YYWebImage'
