@@ -25,9 +25,10 @@
 
 ##  安装 / Installation
 
-  方法一：直接下载, 打开工作区 `StencilLayout.xcworkspace`, 选择 Target `StencilLayout-Universal`进行编译，在根目录下的 `product` 目录下会生成 `StencilLayout.framework` 和 `StencilLayout.bundle`, 将这两个文件添加到您的项目中即可。
-  
-  方法二：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
+方法一：直接下载, 打开工作区 `StencilLayout.xcworkspace`, 选择 Target `StencilLayout-Universal`进行编译，在根目录下的 `product` 目录下会生成 `StencilLayout.framework` 和 `StencilLayout.bundle`, 将这两个文件添加到您的项目中即可。
+
+方法二：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
+
 ```
 pod "StencilLayout"
 ```
