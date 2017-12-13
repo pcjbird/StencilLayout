@@ -20,11 +20,10 @@
 
 ## 演示 / Demo
 
-<p align="center" >
- <img src="demo.png" title="demo">
- </p>
-  
-## 安装 / Installation
+<p align="center"><img src="demo.png" title="demo"></p>
+
+
+##  安装 / Installation
   
 方法一：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
   
