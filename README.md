@@ -10,6 +10,7 @@
 
 ### A Kind of Stencil Based Layout Framework 一种基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。
 
+
 ## 特性 / Features
 
 1. 从页面开发到模板开发，您所要做的工作就是不断丰富您的模板库。
@@ -18,9 +19,10 @@
 4. 云端灵活配置，UI动态生成。
 5. 支持云端动态更新模板库，一种合法的动态化方案。
 
+
 ## 演示 / Demo
 
-<p align="center"><img src="demo.png" title="demo"></p>
+    <p align="center"><img src="demo.png" title="demo"></p>
 
 
 ##  安装 / Installation
@@ -30,7 +32,8 @@
 ```
 pod "StencilLayout"
 ```
-  
+
+
 ## 使用 / Usage
   
 ```
