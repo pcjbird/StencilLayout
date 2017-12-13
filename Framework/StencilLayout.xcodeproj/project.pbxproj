@@ -107,7 +107,7 @@
 		892B84CA1FDFCA8B00038DD0 /* StencilItemWebCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StencilItemWebCell.xib; sourceTree = "<group>"; };
 		892B84CB1FDFCA8B00038DD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892B84D21FDFCAC400038DD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		892B84D31FDFCAC400038DD0 /* StencilLayoutPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StencilLayoutPrefix.pch; sourceTree = "<group>"; };
+		892B84D31FDFCAC400038DD0 /* StencilLayoutPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StencilLayoutPrefix.pch; path = ../StencilLayout/StencilLayoutPrefix.pch; sourceTree = "<group>"; };
 		892B84DE1FDFDE3D00038DD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		892B84DF1FDFDE3D00038DD0 /* StencilLayout.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StencilLayout.podspec; path = ../StencilLayout.podspec; sourceTree = "<group>"; };
 		892B84E01FDFDE3D00038DD0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				892B848D1FDFCA4F00038DD0 /* StencilCollectionReusableView.m */,
 				892B848E1FDFCA4F00038DD0 /* StencilFlowLayoutAttributes.m */,
 			);
-			path = source;
+			name = source;
 			sourceTree = "<group>";
 		};
 		892B84741FDFCA4F00038DD0 /* Util */ = {
@@ -215,7 +215,8 @@
 				892B84991FDFCA4F00038DD0 /* StencilLayoutViewController.h */,
 				892B849A1FDFCA4F00038DD0 /* StencilSectionFooterCell.h */,
 			);
-			path = public;
+			name = public;
+			path = public_headers;
 			sourceTree = "<group>";
 		};
 		892B84C81FDFCA8A00038DD0 /* resource */ = {
@@ -611,7 +612,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = StencilLayoutPrefix.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../StencilLayout/StencilLayoutPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -643,7 +644,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = StencilLayoutPrefix.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../StencilLayout/StencilLayoutPrefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
