@@ -7,7 +7,6 @@
 [![Dependency Status](https://www.versioneye.com/objective-c/StencilLayout/badge.svg?style=flat)](https://www.versioneye.com/objective-c/StencilLayout)
 
 # StencilLayout
-
 ### A Kind of Stencil Based Layout Framework 一种基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。
 
 
