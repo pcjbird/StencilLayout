@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/pcjbird/StencilLayout.git', :tag => s.version.to_s }
   
   s.requires_arc = true
-  s.source_files = 'StencilLayout/*.{h,m,pch}','StencilLayout/Categories/*.{h,m}','StencilLayout/Util/*.{h,m}'
+  s.source_files = 'StencilLayout/*.{h,m,pch}','StencilLayout/public_headers/*.{h}','StencilLayout/Categories/*.{h,m}','StencilLayout/Util/*.{h,m}'
   s.public_header_files = 'StencilLayout/public_headers/*.{h}'
   s.prefix_header_file = 'StencilLayout/StencilLayoutPrefix.pch'
   s.frameworks = 'Foundation','UIKit','WebKit','CoreFoundation','Accelerate','AssetsLibrary','ImageIO','MobileCoreServices','QuartzCore'
