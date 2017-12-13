@@ -3,7 +3,6 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/StencilLayout.svg?style=flat)](http://cocoadocs.org/docsets/StencilLayout/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/StencilLayout.svg?style=flat)](http://cocoadocs.org/docsets/StencilLayout/)
 [![Pod License](http://img.shields.io/cocoapods/l/StencilLayout.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/pcjbird/StencilLayout)
 [![Dependency Status](https://www.versioneye.com/objective-c/StencilLayout/badge.svg?style=flat)](https://www.versioneye.com/objective-c/StencilLayout)
 
 # StencilLayout
@@ -25,8 +24,10 @@
 
 
 ##  安装 / Installation
+
+方法一：直接下载, 打开工作区 `StencilLayout.xcworkspace`, 选择 Target `StencilLayout-Universal`进行编译，在根目录下的 `product` 目录下会生成 `StencilLayout.framework` 和 `StencilLayout.bundle`, 将这两个文件添加到您的项目中即可。
   
-方法一：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
+方法二：`StencilLayout` is available through CocoaPods. To install it, simply add the following line to your Podfile:
   
 ```
 pod "StencilLayout"

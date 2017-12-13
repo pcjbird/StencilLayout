@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		892B84E41FE10E3E00038DD0 /* StencilLayout-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 892B84E51FE10E3E00038DD0 /* Build configuration list for PBXAggregateTarget "StencilLayout-Universal" */;
+			buildPhases = (
+				892B84E81FE10E4500038DD0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "StencilLayout-Universal";
+			productName = "StencilLayout-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		78BA7DBC3DDC290E76D30B00 /* Pods_StencilLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972C5CA58F3AD29DE3436AF5 /* Pods_StencilLayout.framework */; };
 		892B849B1FDFCA4F00038DD0 /* StencilFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 892B846F1FDFCA4F00038DD0 /* StencilFlowLayout.m */; };
@@ -54,9 +68,6 @@
 		892B84D11FDFCAA000038DD0 /* StencilItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 892B84C91FDFCA8A00038DD0 /* StencilItemImageCell.xib */; };
 		892B84D41FDFCAC400038DD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892B84D21FDFCAC400038DD0 /* Info.plist */; };
 		892B84D51FDFCAC400038DD0 /* StencilLayoutPrefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 892B84D31FDFCAC400038DD0 /* StencilLayoutPrefix.pch */; };
-		892B84E11FDFDE3E00038DD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 892B84DE1FDFDE3D00038DD0 /* README.md */; };
-		892B84E21FDFDE3E00038DD0 /* StencilLayout.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 892B84DF1FDFDE3D00038DD0 /* StencilLayout.podspec */; };
-		892B84E31FDFDE3E00038DD0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 892B84E01FDFDE3D00038DD0 /* LICENSE */; };
 		898ADFA91DDAC5B5004B903A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898ADFA81DDAC5B5004B903A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -150,32 +161,32 @@
 		892B846E1FDFCA4F00038DD0 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				892B84741FDFCA4F00038DD0 /* Util */,
+				892B848A1FDFCA4F00038DD0 /* Categories */,
+				892B84831FDFCA4F00038DD0 /* StencilFlowLayout.h */,
 				892B846F1FDFCA4F00038DD0 /* StencilFlowLayout.m */,
+				892B84841FDFCA4F00038DD0 /* StencilLayoutDefine.h */,
 				892B84701FDFCA4F00038DD0 /* StencilInfo.m */,
 				892B84711FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h */,
 				892B84721FDFCA4F00038DD0 /* StencilItemImageCell.m */,
 				892B84731FDFCA4F00038DD0 /* StencilLayoutViewController+SelectEvent.h */,
-				892B84741FDFCA4F00038DD0 /* Util */,
+				892B84871FDFCA4F00038DD0 /* StencilLayoutViewController+SelectEvent.m */,
 				892B84791FDFCA4F00038DD0 /* StencilSectionTitleCell.m */,
 				892B847A1FDFCA4F00038DD0 /* StencilItemCell.m */,
+				892B84891FDFCA4F00038DD0 /* StencilLayoutViewController+Web.h */,
 				892B847B1FDFCA4F00038DD0 /* StencilLayoutViewController+Web.m */,
+				892B84881FDFCA4F00038DD0 /* StencilSectionManager.h */,
 				892B847C1FDFCA4F00038DD0 /* StencilSectionManager.m */,
 				892B847D1FDFCA4F00038DD0 /* StencilLayout.m */,
 				892B847E1FDFCA4F00038DD0 /* StencilFlowLayoutAttributes.h */,
+				892B848E1FDFCA4F00038DD0 /* StencilFlowLayoutAttributes.m */,
 				892B847F1FDFCA4F00038DD0 /* StencilSectionFooterCell.m */,
 				892B84801FDFCA4F00038DD0 /* StencilLayoutViewController.m */,
-				892B84811FDFCA4F00038DD0 /* StencilCollectionReusableView.h */,
 				892B84821FDFCA4F00038DD0 /* StencilItemWebCell.m */,
-				892B84831FDFCA4F00038DD0 /* StencilFlowLayout.h */,
-				892B84841FDFCA4F00038DD0 /* StencilLayoutDefine.h */,
 				892B84851FDFCA4F00038DD0 /* StencilModel.m */,
 				892B84861FDFCA4F00038DD0 /* StencilAdditionalHeaderCell.m */,
-				892B84871FDFCA4F00038DD0 /* StencilLayoutViewController+SelectEvent.m */,
-				892B84881FDFCA4F00038DD0 /* StencilSectionManager.h */,
-				892B84891FDFCA4F00038DD0 /* StencilLayoutViewController+Web.h */,
-				892B848A1FDFCA4F00038DD0 /* Categories */,
+				892B84811FDFCA4F00038DD0 /* StencilCollectionReusableView.h */,
 				892B848D1FDFCA4F00038DD0 /* StencilCollectionReusableView.m */,
-				892B848E1FDFCA4F00038DD0 /* StencilFlowLayoutAttributes.m */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -327,7 +338,6 @@
 				89369E321DD1E85B000F8140 /* Headers */,
 				89369E331DD1E85B000F8140 /* Resources */,
 				FA0D740D92A4BFFBA98EA34F /* [CP] Copy Pods Resources */,
-				892B84DA1FDFD7FE00038DD0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -364,6 +374,10 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Zero Status";
 				TargetAttributes = {
+					892B84E41FE10E3E00038DD0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					89369E341DD1E85B000F8140 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -388,6 +402,7 @@
 			targets = (
 				89369E341DD1E85B000F8140 /* StencilLayout */,
 				89369F9F1DD9724A000F8140 /* StencilLayoutResource */,
+				892B84E41FE10E3E00038DD0 /* StencilLayout-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -397,9 +412,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892B84E21FDFDE3E00038DD0 /* StencilLayout.podspec in Resources */,
-				892B84E11FDFDE3E00038DD0 /* README.md in Resources */,
-				892B84E31FDFDE3E00038DD0 /* LICENSE in Resources */,
 				892B84D41FDFCAC400038DD0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +429,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		892B84DA1FDFD7FE00038DD0 /* ShellScript */ = {
+		892B84E81FE10E4500038DD0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FMK_NAME=${PROJECT_NAME}\n\nWRK_DIR=build\n\n#Resource bundle\nBUNDLE_TARGET_NAME=${FMK_NAME}Resource\nBUNDLEDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.bundle\nINSTALL_BUNDLE_DIR=${SRCROOT}/../StencilLayoutResource/${FMK_NAME}.bundle\n\n#build resource\nxcodebuild -configuration \"Release\" -target \"${BUNDLE_TARGET_NAME}\" -sdk iphoneos clean build\n\nditto \"${BUNDLEDEVICE_DIR}\" \"${INSTALL_BUNDLE_DIR}\"\n\nrm -f \"${INSTALL_BUNDLE_DIR}\"/info.plist\nrm -f \"${INSTALL_BUNDLE_DIR}/${FMK_NAME}\"";
+			shellScript = "FMK_NAME=${PROJECT_NAME}\n\n# Install dir will be the final output to the framework.\n\n# The following line create it in the root folder of the current project.\n\nINSTALL_DIR=${SRCROOT}/../products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\n\nWRK_DIR=build\n\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\n\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n\n# Clean and Building both architectures.\n\nxcodebuild -workspace \"${FMK_NAME}\".xcworkspace -scheme \"${FMK_NAME}\" -configuration \"Release\" -sdk iphoneos clean build\n\nxcodebuild -workspace \"${FMK_NAME}\".xcworkspace -scheme \"${FMK_NAME}\" -configuration \"Release\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\n\nif [ -d \"${INSTALL_DIR}\" ]\n\nthen\n\nrm -rf \"${INSTALL_DIR}\"\n\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\n\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\n#open \"${INSTALL_DIR}\"\n\n#Resource bundle\nBUNDLE_TARGET_NAME=${FMK_NAME}Resource\nBUNDLEDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.bundle\nINSTALL_BUNDLE_DIR=${SRCROOT}/../products/${FMK_NAME}.bundle\n\n#build resource\nxcodebuild -configuration \"Release\" -target \"${BUNDLE_TARGET_NAME}\" -sdk iphoneos clean build\n\nditto \"${BUNDLEDEVICE_DIR}\" \"${INSTALL_BUNDLE_DIR}\"\n\nrm -f \"${INSTALL_BUNDLE_DIR}\"/info.plist\nrm -f \"${INSTALL_BUNDLE_DIR}/${FMK_NAME}\"";
 		};
 		9FEBF85A00DA83DC681806C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -502,6 +514,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		892B84E61FE10E3E00038DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		892B84E71FE10E3E00038DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		89369E3B1DD1E85B000F8140 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -709,6 +737,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		892B84E51FE10E3E00038DD0 /* Build configuration list for PBXAggregateTarget "StencilLayout-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892B84E61FE10E3E00038DD0 /* Debug */,
+				892B84E71FE10E3E00038DD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		89369E2F1DD1E85B000F8140 /* Build configuration list for PBXProject "StencilLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

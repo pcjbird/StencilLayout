@@ -94,11 +94,12 @@
     //cells
     if(self.delegate &&[self.delegate respondsToSelector:@selector(stencilLayoutViewControllerCellNibNames:)])
     {
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"StencilLayout" ofType:@"bundle"]];
         //image
-        [self.collectionView registerNib:[[[NSBundle mainBundle] loadNibNamed:@"StencilLayout.bundle/StencilItemImageCell" owner:nil options:nil] firstObject] forCellWithReuseIdentifier:@"StencilItemImageCell"];
+        [self.collectionView registerNib:[[bundle loadNibNamed:@"StencilItemImageCell" owner:nil options:nil] firstObject] forCellWithReuseIdentifier:@"StencilItemImageCell"];
         [_cellNibNames addObject:@"StencilItemImageCell"];
         //web
-        [self.collectionView registerNib:[[[NSBundle mainBundle] loadNibNamed:@"StencilLayout.bundle/StencilItemWebCell" owner:nil options:nil] firstObject] forCellWithReuseIdentifier:@"StencilItemWebCell"];
+        [self.collectionView registerNib:[[bundle loadNibNamed:@"StencilItemWebCell" owner:nil options:nil] firstObject] forCellWithReuseIdentifier:@"StencilItemWebCell"];
         [_cellNibNames addObject:@"StencilItemWebCell"];
         //others
         NSArray *nibNames = [self.delegate stencilLayoutViewControllerCellNibNames:self];
