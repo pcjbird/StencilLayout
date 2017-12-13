@@ -16,7 +16,9 @@ Pod::Spec.new do |s|
   s.prefix_header_file = 'StencilLayout/StencilLayoutPrefix.pch'
   s.frameworks = 'Foundation','UIKit','WebKit','CoreFoundation','Accelerate','AssetsLibrary','ImageIO','MobileCoreServices','QuartzCore'
 
-  s.resources = "StencilLayoutResource/StencilLayout.bundle"
+  s.resource_bundles = {
+   'StencilLayout' => ['StencilLayout/resource/*.*'],
+  }
   
   s.dependency 'YYImage/WebP'
   s.dependency 'YYWebImage'
