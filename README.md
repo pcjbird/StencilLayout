@@ -12,9 +12,17 @@
 
 ## 特性 / Features
 
+1. 从页面开发到模板开发，您所要做的工作就是不断丰富您的模板库。
+2. 基础的模板库，如果您的项目不够复杂，无需扩展，足以！
+3. 模板属性支持扩展。
+4. 云端灵活配置，UI动态生成。
+5. 支持云端动态更新模板库，一种合法的动态化方案。
 
+## 演示 / Demo
 
-
+<p align="center" >
+ <img src="demo.png" title="demo">
+ </p>
   
 ## 安装 / Installation
   
@@ -26,7 +34,12 @@ pod "StencilLayout"
   
 ## 使用 / Usage
   
-  
+```
+  [StencilLayout startWithStencilStyleUrl:nil debugMode:NO];
+```
+
+待续...
+
   
 ## 关注我们 / Follow us
   
