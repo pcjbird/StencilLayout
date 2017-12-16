@@ -31,7 +31,7 @@
             </constraints>
             <size key="customSize" width="249" height="155"/>
             <connections>
-                <outlet property="imageView" destination="wfY-rf-1MT" id="hka-tf-aR6"/>
+                <outlet property="imageView" destination="wfY-rf-1MT" id="Qhd-Sb-6TJ"/>
             </connections>
             <point key="canvasLocation" x="-148.5" y="-185.5"/>
         </collectionViewCell>

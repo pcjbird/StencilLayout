@@ -15,7 +15,7 @@
 //! 是否调试模式.
 #define bDebugMode  ([[[NSUserDefaults standardUserDefaults] objectForKey:StencilLayoutDebugKey] boolValue])
 
-#define SDK_VERSION   @"1.0.4"
+#define SDK_VERSION   @"1.0.5"
 
 #define SDK_BUILD_VERSION   @"201712160001"
 

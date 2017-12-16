@@ -14,7 +14,7 @@
 @interface StencilItemWebCell()
 
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet id webView;
 @end
 
 @implementation StencilItemWebCell
@@ -35,6 +35,7 @@
     
     id webview = [self createRealWebView];
     [self addSubview:webview];
+    self.webView = webview;
     NSArray *constraints_h=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[webview]-0-|"
                                                                    options:0
                                                                    metrics:nil
