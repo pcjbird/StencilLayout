@@ -94,7 +94,7 @@
     //cells
     if(self.delegate &&[self.delegate respondsToSelector:@selector(stencilLayoutViewControllerCellNibNames:)])
     {
-        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"StencilLayout" ofType:@"bundle"]];
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[StencilLayoutViewController class]] pathForResource:@"StencilLayout" ofType:@"bundle"]];
         //image
         [self.collectionView registerNib:[[bundle loadNibNamed:@"StencilItemImageCell" owner:nil options:nil] firstObject] forCellWithReuseIdentifier:@"StencilItemImageCell"];
         [_cellNibNames addObject:@"StencilItemImageCell"];
