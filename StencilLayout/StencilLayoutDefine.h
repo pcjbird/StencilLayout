@@ -15,9 +15,9 @@
 //! 是否调试模式.
 #define bDebugMode  ([[[NSUserDefaults standardUserDefaults] objectForKey:StencilLayoutDebugKey] boolValue])
 
-#define SDK_VERSION   @"1.0.5"
+#define SDK_VERSION   @"1.0.6"
 
-#define SDK_BUILD_VERSION   @"201712160001"
+#define SDK_BUILD_VERSION   @"201712290001"
 
 #ifdef DEBUG
 #   define SDKLog(fmt, ...) NSLog((@"[🐌StencilLayout] %s (line %d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

@@ -11,12 +11,7 @@
 #import "StencilLayout.h"
 #import "StencilStringUtil.h"
 #import "StencilSectionManager.h"
-
-//! Project version number for StencilLayout.
-//double StencilLayoutVersionNumber = 201611080001;
-//! Project version string for StencilLayout.
-//const unsigned char StencilLayoutVersionString[] = "201611080001";
-
+#import "StencilDataParseUtil.h"
 
 //! StencilLayout是否已经初始化.
 static BOOL bStencilLayoutInited = FALSE;
@@ -121,6 +116,25 @@ static StencilLayout* _sharedLayout = nil;
             SDKLog(@"当前模版样式已经是最新版本。");
             return;
         }
+        NSDictionary *remoteDict = [StencilDataParseUtil toJsonObject:data];
+        if(![remoteDict isKindOfClass:[NSDictionary class]])
+        {
+            SDKLog(@"远程模板文件无法解析，格式不正确.");
+            return;
+        }
+        NSString* version = [StencilDataParseUtil getDataAsString:[remoteDict objectForKey:@"version"]];
+        NSString* update = [StencilDataParseUtil getDataAsString:[remoteDict objectForKey:@"update"]];
+        if([StencilStringUtil isStringBlank:version] || [StencilStringUtil isStringBlank:update])
+        {
+            SDKLog(@"无法获取远程模板文件版本信息，将不会更新该远程模版文件.");
+            return;
+        }
+        if([version compare:[StencilSectionManager sharedInstance].version options:NSNumericSearch] == NSOrderedAscending || [update compare:[StencilSectionManager sharedInstance].update options:NSNumericSearch] == NSOrderedAscending)
+        {
+            SDKLog(@"远程模板文件已过期，请及时更新.");
+            return;
+        }
+        
         if([data writeToFile:path options:NSDataWritingAtomic error:&error])
         {
             [[StencilSectionManager sharedInstance] initSectionStyles:[StencilLayout sharedLayout].stencilStyleFileName background:YES withNotify:YES complete:^{

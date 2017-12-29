@@ -14,7 +14,9 @@
 {
     NSMutableDictionary* sectionStyles;
 }
-
+@property(nonatomic, strong) NSString*  version;
+@property(nonatomic, strong) NSString*  update;
+@property(nonatomic, strong) NSString*  comment;
 -(void) initSectionStyles:(NSString*) fileName background:(BOOL)isBackground complete:(StencilLayoutVoidBlock)block;
 -(void) initSectionStyles:(NSString*) fileName background:(BOOL)isBackground withNotify:(BOOL)bNotify complete:(StencilLayoutVoidBlock)block;
 -(StencilSectionStyle *)GetSectionStyle:(NSString*)styleId;

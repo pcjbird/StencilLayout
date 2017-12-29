@@ -11,54 +11,57 @@
 /*
  //*************************************************示例json**************************************************************************
 {
-    "i1":
-    {
-        "style-id":"i1",
-        "comment":"Banner广告位",
-        "section-margin-top":0,
-        "section-margin-left":0,
-        "section-margin-bottom":0,
-        "section-margin-right":0,
-        "content-margin-top":0,
-        "content-margin-left":0,
-        "content-margin-bottom":0,
-        "content-margin-right":0,
-        "background":"#ffffff",
-        "maxitems":1,
-        "item-merge-layout":true,
-        "start-version":"6.0.0",
-        "item-styles":
-        [
-         {"widthType":0, "fixedWidth":0, "widthRatio":1, "heightType":0, "fixedHeight":0, "heightRatioBaseWidth": 0.69, "defaultLayoutType":3}
-         ],
-    },
-    "i2":
-    {
-        "style-id":"i2",
-        "comment":"快捷入口",
-        "section-margin-top":0,
-        "section-margin-left":0,
-        "section-margin-bottom":0,
-        "section-margin-right":0,
-        "content-margin-top":0,
-        "content-margin-left":0,
-        "content-margin-bottom":0,
-        "content-margin-right":0,
-        "background":"#ffffff",
-        "maxitems":8,
-        "item-merge-layout":true,
-        "item-styles":
-        [
-         {"widthType":0, "fixedWidth":0, "widthRatio":1, "heightType":0, "fixedHeight":0, "heightRatioBaseWidth": 0.18, "defaultLayoutType":4}
-         ],
-    }
+    "version":"1.0.0",
+    "update":"201712290001",
+    "comment":"StencilLayoutDemo项目模版库文件",
+    "library":
+    [
+        {
+            "style-id":"i1",
+            "comment":"Banner广告位",
+            "section-margin-top":0,
+            "section-margin-left":0,
+            "section-margin-bottom":0,
+            "section-margin-right":0,
+            "content-margin-top":0,
+            "content-margin-left":0,
+            "content-margin-bottom":0,
+            "content-margin-right":0,
+            "background":"#ffffff",
+            "maxitems":1,
+            "item-merge-layout":true,
+            "start-version":"6.0.0",
+            "item-styles":
+            [
+             {"widthType":0, "fixedWidth":0, "widthRatio":1, "heightType":0, "fixedHeight":0, "heightRatioBaseWidth": 0.69, "defaultLayoutType":3}
+             ],
+        },
+        {
+            "style-id":"i2",
+            "comment":"快捷入口",
+            "section-margin-top":0,
+            "section-margin-left":0,
+            "section-margin-bottom":0,
+            "section-margin-right":0,
+            "content-margin-top":0,
+            "content-margin-left":0,
+            "content-margin-bottom":0,
+            "content-margin-right":0,
+            "background":"#ffffff",
+            "maxitems":8,
+            "item-merge-layout":true,
+            "item-styles":
+            [
+             {"widthType":0, "fixedWidth":0, "widthRatio":1, "heightType":0, "fixedHeight":0, "heightRatioBaseWidth": 0.18, "defaultLayoutType":4}
+             ],
+        }
+    ]
 }
 
 
 
  //*************************************************注释说明**************************************************************************
-{
-    "i1":                                           //模版样式编号
+[
     {
         "style-id":"i1",                            //模版样式编号
         "comment":"Banner广告位",                    //模版样式备注说明
@@ -92,5 +95,5 @@
     },
     
     //i2,i3,i4......
-}
+]
  */
