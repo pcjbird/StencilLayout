@@ -3,6 +3,7 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/StencilLayout.svg?style=flat)](http://cocoadocs.org/docsets/StencilLayout/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/StencilLayout.svg?style=flat)](http://cocoadocs.org/docsets/StencilLayout/)
 [![Pod License](http://img.shields.io/cocoapods/l/StencilLayout.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![CocoaPods](https://img.shields.io/cocoapods/at/StencilLayout.svg)](https://github.com/pcjbird/StencilLayout)
 [![Dependency Status](https://www.versioneye.com/user/projects/5a30d9570fb24f5ac0b07051/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a30d9570fb24f5ac0b07051)
 [![GitHub release](https://img.shields.io/github/release/pcjbird/StencilLayout.svg)](https://github.com/pcjbird/StencilLayout/releases)
 
