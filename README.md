@@ -4,6 +4,7 @@
 [![Pod Platform](http://img.shields.io/cocoapods/p/StencilLayout.svg?style=flat)](http://cocoadocs.org/docsets/StencilLayout/)
 [![Pod License](http://img.shields.io/cocoapods/l/StencilLayout.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Dependency Status](https://www.versioneye.com/user/projects/5a30d9570fb24f5ac0b07051/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a30d9570fb24f5ac0b07051)
+[![GitHub release](https://img.shields.io/github/release/pcjbird/StencilLayout.svg)](https://github.com/pcjbird/StencilLayout/releases)
 
 # StencilLayout
 ### A Kind of Stencil Based Layout Framework 一种基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。
