@@ -71,9 +71,13 @@ static StencilSectionManager *_instance;
     
     NSString*path =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.json",fileName]];
     
-    BOOL (^copyFileBlock)(void) = ^BOOL(void){
+    BOOL (^copyFileBlock)(BOOL bExist) = ^BOOL(BOOL bExist){
         NSString*resourcePath =[[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
         NSError*error;
+        if(bExist)
+        {
+            [fileManager removeItemAtPath:path error:&error];
+        }
         [fileManager copyItemAtPath:resourcePath toPath:path error:&error];
         if([error isKindOfClass:[NSError class]])
         {
@@ -86,7 +90,7 @@ static StencilSectionManager *_instance;
     if([fileManager fileExistsAtPath:path]== NO)
     {
         SDKLog(@"Document目录下%@.json文件不存在,准备从安装包中拷贝文件到Document目录.",fileName);
-        BOOL bSuccess = copyFileBlock();
+        BOOL bSuccess = copyFileBlock(NO);
         if(!bSuccess)
         {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -125,10 +129,10 @@ static StencilSectionManager *_instance;
         NSString* versionB = [StencilDataParseUtil getDataAsString:[dict objectForKey:@"version"]];
         NSString* updateB = [StencilDataParseUtil getDataAsString:[dict objectForKey:@"update"]];
         
-        if([versionB compare:versionA options:NSNumericSearch] == NSOrderedAscending || [updateB compare:updateA options:NSNumericSearch] == NSOrderedAscending)
+        if(![versionB isKindOfClass:[NSString class]] || ![updateB isKindOfClass:[NSString class]] || [versionB compare:versionA options:NSNumericSearch] == NSOrderedAscending || [updateB compare:updateA options:NSNumericSearch] == NSOrderedAscending)
         {
             SDKLog(@"安装包目录下%@.json文件已更新,准备从安装包中拷贝文件到Document目录.",fileName);
-            BOOL bSuccess = copyFileBlock();
+            BOOL bSuccess = copyFileBlock(YES);
             if(!bSuccess)
             {
                 dispatch_async(dispatch_get_main_queue(), ^{

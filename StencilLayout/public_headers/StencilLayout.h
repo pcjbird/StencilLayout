@@ -8,16 +8,24 @@
 //  框架名称:iOS模版布局框架SDK
 //  框架功能:基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。
 //  修改记录:
+//     pcjbird    2018-01-05  Version:1.0.7 Build:201801050001
+//                            1.修复模版库文件拷贝失败的问题（document目录下模版库文件已经存在的情况下）
+//
 //     pcjbird    2017-12-29  Version:1.0.6 Build:201712290001
 //                            1.模版库文件新增版本信息，将会根据版本信息决定是否更新模版库文件
+//
 //     pcjbird    2017-12-16  Version:1.0.5 Build:201712160001
 //                            1.修复 resource bundle 资源无法获取到的问题
+//
 //     pcjbird    2017-12-13  Version:1.0.3 Build:201712130001
 //                            1.修改CocoaPods下 resource bundle 打包方式
+//
 //     pcjbird    2017-12-12  Version:1.0.2 Build:201712120001
 //                            1.修改图片依赖库为YYWebImage
+//
 //     pcjbird    2017-03-08  Version:1.0.1 Build:201703080001
 //                            1.修复模块点击事件可能失效的问题
+//
 //     pcjbird    2016-11-21  Version:1.0.0 Build:201611210001
 //                            1.首次发布SDK版本
 
