@@ -48,6 +48,7 @@ typedef enum
     StencilItemHeightType   heightType;
     float                   fixedHeight;
     float                   heightRatioBaseWidth;
+    float                   option_additional_width;
     float                   option_additional_height;
     int                     defaultItemType;
     BOOL                    bHighlightSupport;
@@ -59,6 +60,7 @@ typedef enum
 @property(nonatomic, readonly) StencilItemHeightType   heightType;
 @property(nonatomic, readonly) float                   fixedHeight;
 @property(nonatomic, readonly) float                   heightRatioBaseWidth;
+@property(nonatomic, readonly) float                   option_additional_width;
 @property(nonatomic, readonly) float                   option_additional_height;
 @property(nonatomic, readonly) int                     defaultLayoutType;
 @property(nonatomic, readonly) BOOL                    bHighlightSupport;

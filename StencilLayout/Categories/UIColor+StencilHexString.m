@@ -39,6 +39,7 @@
             red   = [self colorComponentFrom: colorString start: 0 length: 2];
             green = [self colorComponentFrom: colorString start: 2 length: 2];
             blue  = [self colorComponentFrom: colorString start: 4 length: 2];
+            alpha = [self colorComponentFrom: colorString start: 6 length: 2];
             break;
         default:
             bResult = FALSE;

@@ -23,6 +23,8 @@
             "section-margin-left":0,
             "section-margin-bottom":0,
             "section-margin-right":0,
+            "item-line-spacing":0,
+            "item-interitem-spacing":0,
             "content-margin-top":0,
             "content-margin-left":0,
             "content-margin-bottom":0,
@@ -43,6 +45,8 @@
             "section-margin-left":0,
             "section-margin-bottom":0,
             "section-margin-right":0,
+            "item-line-spacing":0,
+            "item-interitem-spacing":0,
             "content-margin-top":0,
             "content-margin-left":0,
             "content-margin-bottom":0,
@@ -69,6 +73,8 @@
         "section-margin-left":0,                    //模版左边距
         "section-margin-bottom":0,                  //模版下边距
         "section-margin-right":0,                   //模版右边距
+        "item-line-spacing":0,                      //模版项行距
+        "item-interitem-spacing":0,                 //模版项之间的水平间距
         "content-margin-top":0,                     //模版项上边距
         "content-margin-left":0,                    //模版项左边距
         "content-margin-bottom":0,                  //模版项下边距
@@ -88,6 +94,7 @@
              "heightType":0,                    //模版项高度类型 0，比例 1，固定  2,自定义
              "fixedHeight":0,                   //模版项固定高度   当heightType == 1时有效
              "heightRatioBaseWidth": 0.69,      //模版项高宽比     当heightType == 0时有效
+             "option-additional-width":0,       //可选，Cell附加固定宽度
              "option-additional-height":0,      //可选，Cell附加固定高度
              "defaultLayoutType":3              //模版项默认布局类型
          }

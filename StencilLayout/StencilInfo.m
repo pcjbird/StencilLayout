@@ -19,6 +19,7 @@
 @synthesize heightType;
 @synthesize fixedHeight;
 @synthesize heightRatioBaseWidth;
+@synthesize option_additional_width;
 @synthesize option_additional_height;
 @synthesize defaultLayoutType;
 @synthesize bHighlightSupport;
@@ -33,6 +34,7 @@
     heightType = (StencilItemHeightType)[StencilDataParseUtil getDataAsInt:[data objectForKey:@"heightType"]];
     fixedHeight = [StencilDataParseUtil getDataAsFloat:[data objectForKey:@"fixedHeight"]];
     heightRatioBaseWidth = [StencilDataParseUtil getDataAsFloat:[data objectForKey:@"heightRatioBaseWidth"]];
+    option_additional_width = [StencilDataParseUtil getDataAsFloat:[data objectForKey:@"option-additional-width"]];
     option_additional_height = [StencilDataParseUtil getDataAsFloat:[data objectForKey:@"option-additional-height"]];
     defaultLayoutType = [StencilDataParseUtil getDataAsInt:[data objectForKey:@"defaultLayoutType"]];
     bHighlightSupport = [StencilDataParseUtil getDataAsBool:[data objectForKey:@"bHighlightSupport"]];

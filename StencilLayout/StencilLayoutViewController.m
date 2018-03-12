@@ -510,7 +510,7 @@
                         if (sectionStyle.item_merge_layout)//Merge模式
                         {
                             CGFloat width = (itemStyle.widthType == StencilItemWidthType_Fix) ? itemStyle.fixedWidth : floorf((CGRectGetWidth(self.collectionView.bounds) - SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_left) - SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_right) - SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_left) - SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_right))*itemStyle.widthRatio);
-                            
+                            width += itemStyle.option_additional_width;
                             if(sectionStyle.heightType == StencilSectionHeightType_Auto)//系统自动计算模版高度
                             {
                                 if(itemStyle.heightType == StencilItemHeightType_Ratio)
@@ -547,6 +547,7 @@
                         {
                             float width = (itemStyle.widthType == StencilItemWidthType_Fix) ? itemStyle.fixedWidth : floorf((CGRectGetWidth(self.collectionView.bounds) - SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_left) - SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_right) - SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_left) - SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_right))*itemStyle.widthRatio);
                             
+                            width += itemStyle.option_additional_width;
                             
                             if(itemStyle.heightType == StencilItemHeightType_Ratio)
                             {
@@ -696,7 +697,7 @@
                 StencilSectionStyle* sectionStyle = [sectionManager GetSectionStyle:adSection.styleId];
                 if (sectionStyle)
                 {
-                    return floorf(SDK_AUTOLAYOUTSPACE(sectionStyle.item_line_spacing));
+                    return floorf(sectionStyle.item_line_spacing);
                 }
             }
         }
@@ -721,7 +722,7 @@
                 StencilSectionStyle* sectionStyle = [sectionManager GetSectionStyle:adSection.styleId];
                 if (sectionStyle)
                 {
-                    return floorf(SDK_AUTOLAYOUTSPACE(sectionStyle.item_interitem_spacing));
+                    return floorf(sectionStyle.item_interitem_spacing);
                 }
             }
         }
