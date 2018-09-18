@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'StencilLayout'
   s.summary      = 'iOS一种基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。'
-  s.version      = '1.0.8'
+  s.version      = '1.0.9'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'pcjbird' => 'pcjbird@hotmail.com' }
   s.social_media_url = 'http://www.lessney.com'
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation','UIKit','WebKit','CoreFoundation','Accelerate','AssetsLibrary','ImageIO','MobileCoreServices','QuartzCore'
 
   s.resource_bundles = {
-   'StencilLayout' => ['StencilLayout/resource/*.*'],
+    'StencilLayout' => ['StencilLayout/resource/*.{xib}'],
   }
   
   s.dependency 'YYImage/WebP'
