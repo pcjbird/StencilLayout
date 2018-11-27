@@ -63,10 +63,8 @@
 		892B84C11FDFCA4F00038DD0 /* StencilItemWebCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 892B84981FDFCA4F00038DD0 /* StencilItemWebCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		892B84C21FDFCA4F00038DD0 /* StencilLayoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 892B84991FDFCA4F00038DD0 /* StencilLayoutViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		892B84C31FDFCA4F00038DD0 /* StencilSectionFooterCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 892B849A1FDFCA4F00038DD0 /* StencilSectionFooterCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		892B84CF1FDFCA9100038DD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892B84CB1FDFCA8B00038DD0 /* Info.plist */; };
 		892B84D01FDFCA9C00038DD0 /* StencilItemWebCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 892B84CA1FDFCA8B00038DD0 /* StencilItemWebCell.xib */; };
 		892B84D11FDFCAA000038DD0 /* StencilItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 892B84C91FDFCA8A00038DD0 /* StencilItemImageCell.xib */; };
-		892B84D41FDFCAC400038DD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 892B84D21FDFCAC400038DD0 /* Info.plist */; };
 		892B84D51FDFCAC400038DD0 /* StencilLayoutPrefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 892B84D31FDFCAC400038DD0 /* StencilLayoutPrefix.pch */; };
 		898ADFA91DDAC5B5004B903A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898ADFA81DDAC5B5004B903A /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -371,7 +369,7 @@
 		89369E2C1DD1E85B000F8140 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Zero Status";
 				TargetAttributes = {
 					892B84E41FE10E3E00038DD0 = {
@@ -412,7 +410,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892B84D41FDFCAC400038DD0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +419,6 @@
 			files = (
 				892B84D11FDFCAA000038DD0 /* StencilItemImageCell.xib in Resources */,
 				892B84D01FDFCA9C00038DD0 /* StencilItemWebCell.xib in Resources */,
-				892B84CF1FDFCA9100038DD0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,15 +535,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -590,15 +595,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -630,10 +644,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0300DCBDE87F590E15B1AF5C /* Pods-StencilLayout.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -662,10 +672,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E423477A33635A4A06370C53 /* Pods-StencilLayout.release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -693,10 +699,6 @@
 		89369FA41DD9724B000F8140 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = NO;
 				COPY_PHASE_STRIP = YES;
@@ -715,10 +717,6 @@
 		89369FA51DD9724B000F8140 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = NO;
 				COPY_PHASE_STRIP = YES;

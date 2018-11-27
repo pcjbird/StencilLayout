@@ -35,6 +35,6 @@
 #define SDK_AUTOLAYOUTSPACE(pt) (pt*(SDKScreenWidth/375.0f))
 
 //blocks
-typedef void(^StencilLayoutVoidBlock)();
+typedef void(^StencilLayoutVoidBlock)(void);
 
 #endif /* StencilLayoutDefine_h */
