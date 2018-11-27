@@ -151,12 +151,12 @@
 /**
  *@brief delegate
  */
-@property(nullable, nonatomic, assign) id<StencilLayoutViewControllerDelegate> delegate;
+@property(nullable, nonatomic, weak) id<StencilLayoutViewControllerDelegate> delegate;
 
 /**
  *@brief additional header datasource
  */
-@property(nullable, nonatomic, assign) id<StencilLayoutViewControllerAdditionalHeaderDataSource> headerDataSource;
+@property(nullable, nonatomic, weak) id<StencilLayoutViewControllerAdditionalHeaderDataSource> headerDataSource;
 
 /**
  *@brief 设置附加头部数据源
