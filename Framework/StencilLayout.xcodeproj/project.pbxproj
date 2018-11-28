@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		78BA7DBC3DDC290E76D30B00 /* Pods_StencilLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972C5CA58F3AD29DE3436AF5 /* Pods_StencilLayout.framework */; };
+		890C8F2D21AE695D004A2904 /* StencilAdditionalFooterCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 890C8F2B21AE695D004A2904 /* StencilAdditionalFooterCell.h */; };
+		890C8F2E21AE695D004A2904 /* StencilAdditionalFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C8F2C21AE695D004A2904 /* StencilAdditionalFooterCell.m */; };
 		892B849B1FDFCA4F00038DD0 /* StencilFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 892B846F1FDFCA4F00038DD0 /* StencilFlowLayout.m */; };
 		892B849C1FDFCA4F00038DD0 /* StencilInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 892B84701FDFCA4F00038DD0 /* StencilInfo.m */; };
 		892B849D1FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 892B84711FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h */; };
@@ -71,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		0300DCBDE87F590E15B1AF5C /* Pods-StencilLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StencilLayout/Pods-StencilLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		890C8F2B21AE695D004A2904 /* StencilAdditionalFooterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StencilAdditionalFooterCell.h; sourceTree = "<group>"; };
+		890C8F2C21AE695D004A2904 /* StencilAdditionalFooterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StencilAdditionalFooterCell.m; sourceTree = "<group>"; };
 		892B846F1FDFCA4F00038DD0 /* StencilFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StencilFlowLayout.m; sourceTree = "<group>"; };
 		892B84701FDFCA4F00038DD0 /* StencilInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StencilInfo.m; sourceTree = "<group>"; };
 		892B84711FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StencilColloectionViewDelegateFlowLayout.h; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			children = (
 				892B848A1FDFCA4F00038DD0 /* Categories */,
 				892B84861FDFCA4F00038DD0 /* StencilAdditionalHeaderCell.m */,
+				890C8F2C21AE695D004A2904 /* StencilAdditionalFooterCell.m */,
 				892B84811FDFCA4F00038DD0 /* StencilCollectionReusableView.h */,
 				892B848D1FDFCA4F00038DD0 /* StencilCollectionReusableView.m */,
 				892B84711FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h */,
@@ -214,6 +219,7 @@
 			children = (
 				892B84911FDFCA4F00038DD0 /* SampleStencilSectionStyle.h */,
 				892B84901FDFCA4F00038DD0 /* StencilAdditionalHeaderCell.h */,
+				890C8F2B21AE695D004A2904 /* StencilAdditionalFooterCell.h */,
 				892B84931FDFCA4F00038DD0 /* StencilInfo.h */,
 				892B84961FDFCA4F00038DD0 /* StencilItemCell.h */,
 				892B84941FDFCA4F00038DD0 /* StencilItemImageCell.h */,
@@ -310,6 +316,7 @@
 				892B84C21FDFCA4F00038DD0 /* StencilLayoutViewController.h in Headers */,
 				892B849D1FDFCA4F00038DD0 /* StencilColloectionViewDelegateFlowLayout.h in Headers */,
 				892B84A21FDFCA4F00038DD0 /* StencilDataParseUtil.h in Headers */,
+				890C8F2D21AE695D004A2904 /* StencilAdditionalFooterCell.h in Headers */,
 				892B84B61FDFCA4F00038DD0 /* UIColor+StencilHexString.h in Headers */,
 				892B84A11FDFCA4F00038DD0 /* StencilStringUtil.h in Headers */,
 				892B84AC1FDFCA4F00038DD0 /* StencilCollectionReusableView.h in Headers */,
@@ -480,6 +487,7 @@
 			files = (
 				892B84B21FDFCA4F00038DD0 /* StencilLayoutViewController+SelectEvent.m in Sources */,
 				892B84A31FDFCA4F00038DD0 /* StencilStringUtil.m in Sources */,
+				890C8F2E21AE695D004A2904 /* StencilAdditionalFooterCell.m in Sources */,
 				892B84AA1FDFCA4F00038DD0 /* StencilSectionFooterCell.m in Sources */,
 				892B84A51FDFCA4F00038DD0 /* StencilItemCell.m in Sources */,
 				892B84AB1FDFCA4F00038DD0 /* StencilLayoutViewController.m in Sources */,

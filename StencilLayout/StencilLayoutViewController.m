@@ -13,6 +13,7 @@
 #import "StencilSectionTitleCell.h"
 #import "StencilSectionFooterCell.h"
 #import "StencilAdditionalHeaderCell.h"
+#import "StencilAdditionalFooterCell.h"
 #import "StencilItemCell.h"
 #import "StencilStringUtil.h"
 
@@ -21,6 +22,7 @@
 @interface StencilLayoutViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 {
     NSMutableArray	 *		_headers;
+    NSMutableArray   *      _footers;
     NSMutableArray	 *		_dataSource;
     NSMutableArray   *      _cellNibNames;
 }
@@ -64,6 +66,7 @@
         [self.view addConstraints:constraints_v];
     }
     _headers = [NSMutableArray array];
+    _footers = [NSMutableArray array];
     _dataSource = [NSMutableArray array];
     _cellNibNames = [NSMutableArray array];
     
@@ -127,6 +130,20 @@
         }
     }
     
+    //additional footer
+    if(self.footerDataSource && [self.footerDataSource respondsToSelector:@selector(stencilLayoutViewControllerAdditionalFooterNibNames:)])
+    {
+        NSArray *nibNames = [self.footerDataSource stencilLayoutViewControllerAdditionalFooterNibNames:self];
+        if([nibNames isKindOfClass:[NSArray class]])
+        {
+            for(NSString* nibName in nibNames)
+            {
+                if([nibName length] > 0)[self.collectionView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellWithReuseIdentifier:nibName];
+            }
+            [_cellNibNames addObjectsFromArray:nibNames];
+        }
+    }
+    
     if([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0f)
     {
         if([self.collectionView respondsToSelector:@selector(setPrefetchingEnabled:)])
@@ -157,6 +174,14 @@
     SDKLog(@"更新AdditionalHeader数据源，重新加载界面。");
 }
 
+-(void)setAdditionalFooterDataSource:(NSArray *)ds
+{
+    [_footers removeAllObjects];
+    if([ds isKindOfClass:[NSArray class]])[_footers addObjectsFromArray:ds];
+    [self.collectionView reloadData];
+    SDKLog(@"更新AdditionalFooter数据源，重新加载界面。");
+}
+
 -(void) loadWithDataSource:(NSArray*)ds replaceOld:(BOOL)bReplace
 {
     if(bReplace)[_dataSource removeAllObjects];
@@ -183,8 +208,9 @@
 {
     if(collectionView == self.collectionView)
     {
-        SDKLog(@"numberOfSections:%d",(int)([_headers count] + [_dataSource count]));
-        return ([_headers count] + [_dataSource count]);
+        NSUInteger count = [_headers count] + [_dataSource count] + [_footers count];
+        SDKLog(@"numberOfSections:%@",@(count));
+        return (NSInteger)count;
     }
     return 0;
 }
@@ -230,6 +256,12 @@
                     SDKLog(@"can not find section style: %@", adSection.styleId);
                 }
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                section = section - [_dataSource count];
+                SDKLog(@"numberOfItemsInFooterSection:%d(footer section index:%d)", 1, (int)section);
+                return 1;
+            }
         }
     }
     return 0;
@@ -264,6 +296,12 @@
                     SDKLog(@"referenceSizeForHeaderInSection:%@(content section index:%d)", NSStringFromCGSize(headersize), (int)section);
                     return headersize;
                 }
+            }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                section = section-[_dataSource count];
+                SDKLog(@"referenceSizeForFooterInSection:%@(footer section index:%d)", NSStringFromCGSize(CGSizeZero), (int)section);
+                return CGSizeZero;
             }
         }
     }
@@ -457,6 +495,25 @@
                     }
                 }
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                section = section - [_dataSource count];
+                if(self.footerDataSource && [self.footerDataSource respondsToSelector:@selector(stencilLayoutViewControllerAdditionalFooterNibNames:)])
+                {
+                    NSArray *nibNames = [self.footerDataSource stencilLayoutViewControllerAdditionalFooterNibNames:self];
+                    if([nibNames isKindOfClass:[NSArray class]] && [nibNames count] > section)
+                    {
+                        NSString* nibName = [nibNames objectAtIndex:section];
+                        StencilAdditionalFooterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nibName forIndexPath:indexPath];
+                        id ds = [_footers objectAtIndex:section];
+                        [cell updateDataSource:ds];
+                        
+                        return cell;
+                    }
+                }
+                NSString *exception = [NSString stringWithFormat:@"无法为indexPath创建StencilAdditionaFooterCell，indexPath:%@",[indexPath description]];
+                SDK_RAISE_EXCEPTION(exception);
+            }
         }
     }
     NSString *exception = [NSString stringWithFormat:@"无法为indexPath创建UICollectionViewCell，indexPath:%@",[indexPath description]];
@@ -594,6 +651,18 @@
                 }
                 
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                section = section - [_dataSource count];
+                if(self.footerDataSource && [self.footerDataSource respondsToSelector:@selector(stencilLayoutViewController:heightForAdditionalFooterAtIndex:)])
+                {
+                    CGSize size = CGSizeMake(SDKScreenWidth, [self.footerDataSource stencilLayoutViewController:self heightForAdditionalFooterAtIndex:section]);
+                    SDKLog(@"sizeForItemAtIndexPath:%@(footer section index:%d)", NSStringFromCGSize(size), (int)section);
+                    return size;
+                }
+                SDKLog(@"sizeForItemAtIndexPath:%@(footer section index:%d)", NSStringFromCGSize(CGSizeZero), (int)section);
+                return CGSizeZero;
+            }
         }
     }
 
@@ -622,6 +691,10 @@
                     return UIEdgeInsetsMake(SDK_AUTOLAYOUTSPACE(adSection.fMarginTop), SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_left), SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_bottom), SDK_AUTOLAYOUTSPACE(sectionStyle.section_margin_right));
                 }
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return UIEdgeInsetsZero;
+            }
         }
     }
     return UIEdgeInsetsZero;
@@ -647,6 +720,10 @@
                 {
                     return UIEdgeInsetsMake(SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_top), SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_left), SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_bottom), SDK_AUTOLAYOUTSPACE(sectionStyle.content_margin_right));
                 }
+            }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return UIEdgeInsetsZero;
             }
         }
     }
@@ -674,6 +751,10 @@
                     return sectionStyle.background ? sectionStyle.background :[UIColor clearColor];
                 }
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return [UIColor clearColor];
+            }
         }
     }
     return [UIColor clearColor];
@@ -700,6 +781,10 @@
                     return floorf(sectionStyle.item_line_spacing);
                 }
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return 0;
+            }
         }
     }
     return 0;
@@ -724,6 +809,10 @@
                 {
                     return floorf(sectionStyle.item_interitem_spacing);
                 }
+            }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return 0;
             }
         }
     }
@@ -773,6 +862,10 @@
                 }
                 
             }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return;
+            }
         }
     }
 }
@@ -806,6 +899,10 @@
                     }
                 }
                 
+            }
+            else if([_dataSource count] + [_footers count] > section)
+            {
+                return;
             }
         }
     }

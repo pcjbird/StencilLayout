@@ -129,6 +129,27 @@
 @end
 
 /**
+ *@brief StencilLayoutViewControllerAdditionalFooterDataSource
+ */
+@protocol StencilLayoutViewControllerAdditionalFooterDataSource <NSObject>
+@optional
+/**
+ *@brief AdditionalFooterCellNibs数据源，用于registerNib
+ *@param vc StencilLayoutViewController
+ *@return nib name的字符串数组
+ */
+-(nullable NSArray*) stencilLayoutViewControllerAdditionalFooterNibNames:(nonnull StencilLayoutViewController*)vc;
+/**
+ *@brief AdditionalFooterCell的高度
+ *@param vc StencilLayoutViewController
+ *@param index 索引，从0开始
+ *@return AdditionalFooterCell的高度
+ */
+-(CGFloat) stencilLayoutViewController:(nonnull StencilLayoutViewController*)vc heightForAdditionalFooterAtIndex:(NSInteger)index;
+
+@end
+
+/**
  *@brief StencilLayoutViewController
  */
 @interface StencilLayoutViewController : UIViewController
@@ -159,11 +180,23 @@
 @property(nullable, nonatomic, weak) id<StencilLayoutViewControllerAdditionalHeaderDataSource> headerDataSource;
 
 /**
+ *@brief additional footer datasource
+ */
+@property(nullable, nonatomic, weak) id<StencilLayoutViewControllerAdditionalFooterDataSource> footerDataSource;
+
+/**
  *@brief 设置附加头部数据源
  *@param ds 数据源
  *@note 倘若头部某一section确实不需要填充数据源，请填写STENCILADDITIONALHEADERDATASOURCEPLACEHOLDER 数据源占位符，不能为空
  */
 -(void) setAdditionalHeaderDataSource:(nullable NSArray*)ds;
+
+/**
+ *@brief 设置附加尾部数据源
+ *@param ds 数据源
+ *@note 倘若尾部某一section确实不需要填充数据源，请填写STENCILADDITIONALFOOTERDATASOURCEPLACEHOLDER 数据源占位符，不能为空
+ */
+-(void) setAdditionalFooterDataSource:(nullable NSArray*)ds;
 
 /**
  *@brief 加载数据源

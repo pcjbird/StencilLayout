@@ -8,6 +8,9 @@
 //  框架名称:iOS模版布局框架SDK
 //  框架功能:基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。
 //  修改记录:
+//     pcjbird    2018-11-28  Version:1.1.1 Build:201811280001
+//                            1.支持尾部附加数据源
+//
 //     pcjbird    2018-11-27  Version:1.1.0 Build:201811270001
 //                            1.Animated Image Support
 //
@@ -60,6 +63,8 @@ FOUNDATION_EXPORT const unsigned char StencilLayoutVersionString[];
 
 //头部数据源占位符
 #define STENCILADDITIONALHEADERDATASOURCEPLACEHOLDER @"StencilAdditionalHeaderDataSourcePlaceHolder"
+//尾部数据源占位符
+#define STENCILADDITIONALFOOTERDATASOURCEPLACEHOLDER @"StencilAdditionalFooterDataSourcePlaceHolder"
 
 //!模版样式更新通知
 #define STENCIL_LAYOUT_STYLE_UPDATED_NOTIFICATION  @"StencilLayoutStyleUpdatedNotification"
@@ -72,6 +77,7 @@ FOUNDATION_EXPORT const unsigned char StencilLayoutVersionString[];
 #import <StencilLayout/StencilItemImageCell.h>
 #import <StencilLayout/StencilItemWebCell.h>
 #import <StencilLayout/StencilAdditionalHeaderCell.h>
+#import <StencilLayout/StencilAdditionalFooterCell.h>
 #import <StencilLayout/StencilLayoutViewController.h>
 
 /** StencilLayout错误定义
