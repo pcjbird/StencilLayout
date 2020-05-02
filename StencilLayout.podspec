@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'StencilLayout'
   s.summary      = 'iOS一种基于模版的布局模式，旨在支持广告位灵活配置，高效运营，UI动态生成，提高开发效率。'
-  s.version      = '1.1.1'
+  s.version      = '1.1.2'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'pcjbird' => 'pcjbird@hotmail.com' }
   s.social_media_url = 'http://www.lessney.com'

@@ -23,16 +23,6 @@
 {
     [super awakeFromNib];
     
-    self.preferWKWebView = YES;
-    if(self.parentViewController)
-    {
-        if(self.parentViewController.delegate && [self.parentViewController.delegate respondsToSelector:@selector(stencilLayoutViewControllerPreferWKWebView:)])
-        {
-            BOOL bPreferWKWebView = [self.parentViewController.delegate stencilLayoutViewControllerPreferWKWebView:self.parentViewController];
-            self.preferWKWebView = bPreferWKWebView;
-        }
-    }
-    
     id webview = [self createRealWebView];
     [self addSubview:webview];
     self.webView = webview;
@@ -70,11 +60,7 @@
 
 -(void)loadRequest:(NSURLRequest*)request
 {
-    if([self.webView isKindOfClass:[UIWebView class]])
-    {
-        [(UIWebView*)self.webView loadRequest:request];
-    }
-    else if([self.webView isKindOfClass:[WKWebView class]])
+    if([self.webView isKindOfClass:[WKWebView class]])
     {
         [(WKWebView*)self.webView loadRequest:request];
     }
@@ -83,7 +69,7 @@
 - (id)createRealWebView
 {
     Class wkwebviewClass = NSClassFromString(@"WKWebView");
-    if(wkwebviewClass&&self.preferWKWebView)
+    if(wkwebviewClass)
     {
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
         // 设置偏好设置
@@ -106,15 +92,7 @@
         [self addSubview:webview];
         return webview;
     }
-    else
-    {
-        UIWebView* webview = [[UIWebView alloc] initWithFrame:self.bounds];
-        [webview setBackgroundColor:[UIColor clearColor]];
-        webview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [self addSubview:webview];
-        
-        return webview;
-    }
+    return nil;
 }
 
 

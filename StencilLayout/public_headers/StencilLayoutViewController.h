@@ -99,12 +99,7 @@
  *@return 处理好的url地址
  */
 -(nonnull NSString *) stencilLayoutViewController:(nonnull StencilLayoutViewController*)vc prepareWebUrl:(nonnull NSString*)pageUrl;
-/**
- *@brief 是否优先使用WKWebView
- *@param vc StencilLayoutViewController
- *@return 是否优先使用WKWebView
- */
--(BOOL) stencilLayoutViewControllerPreferWKWebView:(nonnull StencilLayoutViewController*)vc;
+
 @end
 
 /**

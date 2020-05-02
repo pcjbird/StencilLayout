@@ -10,9 +10,5 @@
 
 @interface StencilItemWebCell : StencilItemCell
 
-/*!
- *  A Boolean val indicate whether prefer to user WKWebView when it is available.
- */
-@property(nonatomic, assign) BOOL preferWKWebView;
 
 @end
